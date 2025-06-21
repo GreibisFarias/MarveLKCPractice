@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MarveLKCPracticeApp: App {
+    @StateObject private var vm = MarvelViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CharacterListView()
+                .environmentObject(vm)
         }
     }
 }
